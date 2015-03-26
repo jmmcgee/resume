@@ -1,17 +1,10 @@
-\documentclass[line, letterpaper, margin]{res}
+\documentclass[line, letterpaper, 10pt]{res}
 
+\usepackage[hmargin=2cm, vmargin=1cm]{geometry}
+\usepackage{helvet}
 %\usepackage{showframe}
-\usepackage{helvet} % Default font is the helvetica postscript font
-\usepackage{fancyhdr} % Using to edit header/footer
 \usepackage[us,12hr]{datetime} % `us' makes \today behave as usual in TeX/LaTeX
 
-% Put things in the headers/footers
-\fancypagestyle{plain}{
-    \fancyhf{} % No page number. (Don't ask me why.)
-
-    \rfoot{Compiled on {\mmddyyyydate\today} at \currenttime}
-}
-\pagestyle{plain} % apply style described above
 
 \begin{document}
 \name{Joseph Marvin McGee}
@@ -37,7 +30,7 @@
 %        \item 
 %        \item Senior Design
 %    \end{itemize}
-    Cumulative GPA: \quad 3.114/4.000 (Overall) \quad 3.667/4.000 (Major)
+    Cumulative GPA: \quad 3.150/4.000 (Overall) \quad 3.617/4.000 (Major)
 
 \section{TECHNOLOGY \\ SKILLS} 
     {\sl Programming Languages:}  C, C++, Java, JavaScript, Python \\
