@@ -1,6 +1,6 @@
 \documentclass[line, letterpaper, 10pt]{res}
 
-\usepackage[hmargin=2cm, vmargin=1cm]{geometry}
+\usepackage[hmargin=2.00cm, vmargin=0.90cm]{geometry}
 \usepackage{helvet}
 %\usepackage{showframe}
 \usepackage[us,12hr]{datetime} % `us' makes \today behave as usual in TeX/LaTeX
@@ -30,41 +30,41 @@
 %        \item
 %        \item Senior Design
 %    \end{itemize}
-    Cumulative GPA: \quad 3.150/4.000 (Overall) \quad 3.617/4.000 (Major)
+    Cumulative GPA: \quad 3.162/4.000 (Overall) \quad 3.600/4.000 (Major)
 
 \section{TECHNOLOGY \\ SKILLS}
     {\sl Programming Languages:}  C, C++, Java, JavaScript, Python \\
     {\sl Web Technologies:} Django, Vaadin, NodeJS, JQuery \\
-    {\sl Software Engineering:} Git, Maven, GNU Make \\
-    {\sl Misc. Technologies:} bash, ssh, LaTeX, MinGW, PostgreSQL, VirtualBox, Vim \\
-    {\sl Operating Systems:} Debian, Ubuntu, Windows XP -- Windows 8.1
+    {\sl Software Engineering:} Git, Maven, GNU Make, GCC, MinGW \\
+    {\sl Misc. Technologies:} bash, ssh, LaTeX, PostgreSQL, VirtualBox, Vim \\
+    {\sl Operating Systems:} Debian, Ubuntu, Arch Linux, Windows XP -- Windows 8.1
 
 \section{EXPERIENCE}
-    {\bf Student Manager}, Engineering Student Startup Center \hfill {\bf 10/13 -- Present} \\
+
+    {\bf Software Engineer (Intern)}, Intel, Jones Farms Campus \hfill {\bf 06/15 -- 09/15} \\
+    Hillsboro, OR
+    \begin{itemize} \itemsep -2pt
+        \item Modifying OpenMPI to route network I/O through DPDK framework.
+        \item Debugging OpenMPI and DPDK-based TCP/IP userspace network stacks to diagnose errors.
+        \item Implement deficincies in DPDK-based TCP/IP network stacks to make them compatible with OpenMPI.
+        \item Diagnose and resolve linkage errors resulting from the interaction of several layers of shared/static libraries.
+            \subitem -- Directly analyse object/libary files to resolve symbol conflicts
+    \end{itemize}
+
+    {\bf Co-Founder, Software Engineer}, Archer \hfill {\bf 05/13 -- 06/15}
+    \begin{itemize} \itemsep -2pt % Reduce space between items
+        \item Designed computer vision algorithms to facilitate a spatial input mechanism.
+        %\item Engineered prototype under time-pressure to show progress to potential investors.
+        \item Designed and debugged systems to visualize and quantify correctness of algorithm output.
+    \end{itemize}
+
+    {\bf Student Manager}, Engineering Student Startup Center \hfill {\bf 10/13 -- 03/15} \\
     University of California, Davis
     \begin{itemize} \itemsep -2pt % Reduce space between items
         \item Created simple scripts to manage event-scheduling and forms management.
         \item Assisted students with equipment: 3D Printer, 3D Scanner, ShopBot.
         \item Planned and facilitated events; Coordinated with student-run organizations.
     \end{itemize}
-
-    {\bf Software Engineer}, Archer \hfill {\bf 05/13 -- Present} \\
-    Davis, CA
-    \begin{itemize} \itemsep -2pt % Reduce space between items
-        \item Designed computer vision algorithms to facilitate a spatial input mechanism.
-        %\item Engineered prototype under time-pressure to show progress to potential investors.
-        \item Designed and debugged systems to visualize and quantify correctness of algorithm output.
-
-    \end{itemize}
-
-    {\bf Software Engineer}, ECS 160: Software Engineering \hfill {\bf 01/15 -- 03/15} \\
-    University of California, Davis
-    \begin{itemize} \itemsep -2pt
-        \item Designed specification for multi-player network protocol--running over TCP/IP.
-        \item Wrote a Server application to facilitate multi-player communications.
-        \item Managed multiple team members to efficiently work towards project goals.
-    \end{itemize}
-
 
     {\bf Software Engineer (Intern)}, Intel, Jones Farms Campus \hfill {\bf 06/14 -- 09/14} \\
     Hillsboro, OR
@@ -74,7 +74,26 @@
             \subitem -- Identified and addressed concurrency issues with the system.
             \subitem -- Documented progress and kept records of code history in Git.
         \item Presented design goals and realized solution for Team to actually use.
+    \end{itemize}
 
+\section{PROJECTS}
+
+    University of California, Davis:
+
+    {\bf Fort Nitta: An Atari Rampart Remake}, \hfill {\bf 01/15 -- 03/15} \\
+    ECS 160: Software Engineering
+    \begin{itemize} \itemsep -2pt
+        \item Designed specification for multi-player network protocol--running over TCP/IP.
+        \item Designed and wrote a multi-threaded server to facilitate multi-player communications.
+        \item Managed multiple team members to efficiently work towards project goals.
+    \end{itemize}
+
+    {\bf VirtualMachine}, \hfill  {\bf 01/15 -- 03/15} \\
+    ECS 150: Operating Systems
+    \begin{itemize} \itemsep -2pt
+        \item Implemented a preemptive multitasking sheduler
+        \item Implemented read/write on file descriptors by setting up shared memory and performing I/O asychronously through low-level functions.
+        \item Partially implemnted access to a FAT filesystem image.
     \end{itemize}
 
 \section{COMMUNITY}
@@ -91,8 +110,10 @@
         \item Supervised children at summer camp; chaperoned on Friday outings.
     \end{itemize}
 
+
 \section{EXTRA-CURRICULAR ACTIVITIES}
-    Senator, Black Engineers Association (UC Davis chapter of NSBE) \\
+    Senator, Black Engineers Association (UC Davis chapter of NSBE) \hfill {\bf 01/12 -- Present} \\
+    Member, Black Engineers Association (UC Davis chapter of NSBE) \\
     Member, Computer Science Club \\
     Member, Linda Francis Alexander Scholars \\
 
