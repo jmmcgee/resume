@@ -1,10 +1,10 @@
-\documentclass[line, letterpaper, 10pt]{res}
+\documentclass[10pt, letterpaper]{res}
 
 \usepackage[hmargin=2.00cm, vmargin=0.90cm]{geometry}
 \usepackage{helvet}
 %\usepackage{showframe}
 \usepackage[us,12hr]{datetime} % `us' makes \today behave as usual in TeX/LaTeX
-
+\usepackage{enumitem}
 
 \begin{document}
 \name{Joseph Marvin McGee}
@@ -17,61 +17,73 @@
 %    Seeking a career that will help me take full advantage of my passion and experience in software engineering and computer science.
 
 \section{EDUCATION}
-    {\sl Bachelor of Computer Science and Engineering}, (expected June 2016) \\
-    University of California, Davis, California \\
-    Cumulative GPA: \quad 3.129/4.000 (Overall) \quad 3.550/4.000 (Major)
+    {\sl Master of Computer Science}, (expected June 2018) \hfill  Cumulative GPA: \quad 4.000/4.000 \\
+    {\sl Bachelor of Computer Science and Engineering}, June 2016 \\
+    University of California, Davis
 
-\section{TECHNOLOGY \\ SKILLS}
-    {\sl Programming Languages:}  C, C++, Java, JavaScript, Python \\
-    {\sl Software Engineering:} Git, Maven, GNU Make, GCC, MinGW, GDB \\
-    {\sl Misc Technologies:} bash, ssh, LaTeX, PostgreSQL \\
-    {\sl Useful Applications:} VirtualBox, Vim, Eclipse, Wireshark \\
-    {\sl Operating Systems:} Debian, Ubuntu, Linux Mint, Arch Linux, Windows XP -- Windows 10
 
 \section{EXPERIENCE}
-
-    {\bf Software Engineer (Intern)}, Intel, Jones Farms Campus \hfill {\bf 06/15 -- 09/15} \\
-    Hillsboro, OR
+    
+    {\bf Teacher's Assistant}, ECS 30: Introduction to Programming (in C) \hfill {\bf 03/16 -- 06/16} \\
+	University of California, Davis
     \begin{itemize} \itemsep -2pt
+        \item Taught 4 discussion sections weekly in order to expand upon topics introduced in lecture
+        \item Helped students understand and navigate increasingly complex problems
+    \end{itemize}
+
+    {\bf Software Engineer}, Intel, Jones Farms Campus \hfill {\bf 06/15 -- 09/15} \\
+    Hillsboro, OR
+    \begin{itemize}[noitemsep]	 
         \item Modifying OpenMPI to route network I/O through DPDK framework.
         \item Debugging OpenMPI and DPDK-based TCP/IP user-space network stacks to diagnose errors.
         \item Implement deficiencies in DPDK-based TCP/IP network stacks to make them compatible with OpenMPI.
         \item Diagnose and resolve linkage errors resulting from the interaction of several layers of shared/static libraries.
-            \subitem -- Directly analyze object/library files to resolve symbol conflicts
     \end{itemize}
 
-    {\bf Software Engineer}, Archer \hfill {\bf 05/13 -- 06/15}
-    \begin{itemize} \itemsep -2pt % Reduce space between items
-        \item Designed computer vision algorithms to facilitate a spatial input mechanism.
-        %\item Engineered prototype under time-pressure to show progress to potential investors.
-        \item Designed and debugged systems to visualize and quantify correctness of algorithm output.
+    {\bf Reader}, ECS 122A: Algorithm Analysis and Design \hfill {\bf 03/15 -- 06/15}\\
+	University of California, Davis
+	\begin{itemize}[noitemsep]	 
+        \item Graded homework; evaluated student's algorithms
+    \end{itemize}
+
+    {\bf Software Engineer}, Intel, Jones Farms Campus \hfill {\bf 06/14 -- 09/14} \\
+    Hillsboro, OR
+    \begin{itemize}[noitemsep]
+        \item Interpreted broad project requirements to create specific designs.
+        \item Developed a database-centered web application to store automated testing data.
     \end{itemize}
 
     {\bf Student Manager}, Engineering Student Startup Center \hfill {\bf 10/13 -- 03/15} \\
     University of California, Davis
-    \begin{itemize} \itemsep -2pt % Reduce space between items
+    \begin{itemize}[noitemsep] % Reduce space between items
         \item Created simple scripts to manage event-scheduling and forms management.
         \item Assisted students with equipment: 3D Printer, 3D Scanner, ShopBot.
         \item Planned and facilitated events; Coordinated with student-run organizations.
     \end{itemize}
+%
+%    {\bf Software Engineer}, Archer \hfill {\bf 05/13 -- Present}
+%    \begin{itemize}[noitemsep] % Reduce space between items
+%    	\item Design and develop prototype computer vision algorithms
+%        \item Designed computer vision algorithms to facilitate a spatial input mechanism.
+%        \item Engineered prototype under time-pressure to show progress to potential investors.
+%        \item Designed and debugged systems to visualize and quantify correctness of algorithm output.
+%    \end{itemize}
 
-    {\bf Software Engineer (Intern)}, Intel, Jones Farms Campus \hfill {\bf 06/14 -- 09/14} \\
-    Hillsboro, OR
-    \begin{itemize} \itemsep -2pt
-        \item Interpreted broad project requirements to create specific designs.
-        \item Engineered and configured a functional database-centered web application.
-            \subitem -- Identified and addressed concurrency issues with the system.
-            \subitem -- Documented progress and kept records of code history in Git.
-        \item Presented design goals and realized solution for team to actually use.
-    \end{itemize}
 
 \section{PROJECTS}
 
-    University of California, Davis:
-
-    {\bf Fort Nitta: An Atari Rampart Remake}, \hfill {\bf 01/15 -- 03/15} \\
+    %University of California, Davis:
+    {\bf Student Research} \hfill {\bf 09/15 -- Present} \\
+    University of California, Davis
+    \begin{itemize}[noitemsep]
+		\item Integrating DPDK into OpenMPI communication subsystem to characterize potential performance benefits
+        \item Analyzing bottlenecks in utilizing 10/40/100Gb network speeds on commodity hardware/software
+        \item Exploring extensible and flexible solution to scale to increasing core-counts and network speeds
+    \end{itemize}
+	
+    {\bf Fort Nitta: An Atari Rampart Remake} \hfill {\bf 01/15 -- 03/15} \\
     ECS 160: Software Engineering
-    \begin{itemize} \itemsep -2pt
+    \begin{itemize}[noitemsep]
         \item Designed specification for multi-player network protocol--running over TCP/IP.
         \item Designed and wrote a multi-threaded server to facilitate multi-player communications.
         \item Managed multiple team members to efficiently work towards project goals.
@@ -79,47 +91,56 @@
 
     {\bf VirtualMachine}, \hfill  {\bf 01/15 -- 03/15} \\
     ECS 150: Operating Systems
-    \begin{itemize} \itemsep -2pt
+    \begin{itemize}[noitemsep]
         \item Implemented a preemptive multitasking scheduler.
         \item Implemented blocking file access through use of asynchronous I/O on shared memory.
         \item Partially implemented access to a FAT file system image.
     \end{itemize}
 
-\section{COURSEWORK}
-    ECS 20 - Discrete Mathematics \\
-    ECS 30 - Introduction to Programming (in C) \\
-    ECS 40 - Software Development and Object-Oriented Programming (in C++) \\
-    ECS 50 - Assembly Languages \\
-    ECS 60 - Data Structures and Algorithms \\
-    ECS 122A - Algorithm Analysis and Design \\
-    ECS 132 - Probability and Statistics \\
-    ECS 140 - Programming Languages \\
-    ECS 150 - Operating Systems \\
-    ECS 152A - Computer Networks \\
-    ECS 160 - Software Engineering \\
-    ECS 171 - Machine Learning \\
-    ECS 154A/B - Computer Architecture \\
-    ECS 193A/B - Senior Design \\
 
-\section{EXTRA-CURRICULAR ACTIVITIES}
-    Senator, Black Engineers Association (UC Davis chapter of NSBE) \hfill {\bf 01/12 -- Present} \\
-    Member, Black Engineers Association (UC Davis chapter of NSBE) \\
-    Member, Computer Science Club \\
-    Member, Linda Francis Alexander Scholars \\
+\section{SKILLS}
+    {\sl Programming Languages:}  C, C++, Java, JavaScript, Python \\
+    %{\sl Software Engineering:} bash, ssh, git, make, Maven, LaTex, PostgresSQL\\
+    %{\sl Misc Technologies:} bash, ssh, LaTeX, PostgreSQL \\
+    %{\sl Useful Applications:} VirtualBox, Vim, Eclipse, Wireshark \\
+    {\sl Operating Systems:} Debian, Ubuntu, Linux Mint, Arch Linux, Windows XP -- Windows 10 \\
+    {\sl Miscellaneous: } bash, ssh, Git, GDB, Make, OpenCV, LaTeX, VirtualBox, Wireshark
 
-\section{COMMUNITY}
-    {\bf Teacher}, Educating Young Minds \hfill {\bf 06/13 -- 08/13} \\
-    |\raggedright{\hfill {\bf 06/12 -- 08/12}} \\
-    Los Angeles, CA
-    \begin{itemize} \itemsep -2pt
-        \item Taught grammar, reading comprehension, and essay-writing skills to classes between 5th and 12th grade.
-    \end{itemize}
+%\section{COURSEWORK}
+%    ECS 20 - Discrete Mathematics \\
+%    ECS 30 - Introduction to Programming (in C) \\
+%    ECS 40 - Software Development and Object-Oriented Programming (in C++) \\
+%    ECS 50 - Assembly Languages \\
+%    ECS 60 - Data Structures and Algorithms \\
+%    ECS 122A - Algorithm Analysis and Design \\
+%    ECS 132 - Probability and Statistics \\
+%    ECS 140 - Programming Languages \\
+%    ECS 150 - Operating Systems \\
+%    ECS 152A - Computer Networks \\
+%    ECS 160 - Software Engineering \\
+%    ECS 171 - Machine Learning \\
+%    ECS 154A/B - Computer Architecture \\
+%    ECS 193A/B - Senior Design \\
 
-    {\bf Camp Counselor}, Jenesse, Women's Shelter \hfill {\bf 07/11 -- 08/11} \\
-    Los Angeles, CA
-    \begin{itemize} \itemsep -2pt % Reduce space between items
-        \item Supervised children at summer camp; chaperoned on Friday outings.
-    \end{itemize}
+%\section{EXTRA-CURRICULAR ACTIVITIES}
+%    Senator, Black Engineers Association (UC Davis chapter of NSBE) \hfill {\bf 01/12 -- Present} \\
+%    Member, Black Engineers Association (UC Davis chapter of NSBE) \\
+%    Member, Computer Science Club \\
+%    Member, Linda Francis Alexander Scholars \\
+%
+%\section{COMMUNITY}
+%    {\bf Teacher}, Educating Young Minds \hfill {\bf 06/13 -- 08/13} \\
+%    |\raggedright{\hfill {\bf 06/12 -- 08/12}} \\
+%    Los Angeles, CA
+%    \begin{itemize} \itemsep -2pt
+%        \item Taught grammar, reading comprehension, and essay-writing skills to classes between 5th and 12th grade.
+%    \end{itemize}
+%
+%    {\bf Camp Counselor}, Jenesse, Women's Shelter \hfill {\bf 07/11 -- 08/11} \\
+%    Los Angeles, CA
+%    \begin{itemize} \itemsep -2pt % Reduce space between items
+%        \item Supervised children at summer camp; chaperoned on Friday outings.
+%    \end{itemize}
 
 %---------------------------------------------------------------------------------------------------
 
