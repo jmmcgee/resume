@@ -1,9 +1,10 @@
 .PHONY: FORCE_MAKE all clean
 
-all: resume.pdf
+all: portfolio.pdf
+portfolio.pdf: resume.pdf cover.pdf
 
 %.pdf : %.tex
-	latexmk -pdf -dvi- -ps- $<
+	latexmk -pdfxe $<
 
 clean:
 	latexmk -CA

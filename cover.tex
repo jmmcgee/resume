@@ -1,0 +1,98 @@
+\documentclass[10pt]{letter} % Uses 10pt
+	\makeatletter
+	\let\@texttop\relax
+	\makeatother
+
+\usepackage[letterpaper, total={7in,10in}, hoffset=0in]{geometry} % paper details
+\usepackage{fancyhdr}
+\usepackage[us,12hr]{datetime}
+\usepackage{helvet}
+
+\usepackage{hyperref,xcolor}
+\usepackage{ifthen,ifxetex,ifluatex}
+\ifxetex
+	\usepackage{fontspec}
+%	\setmainfont[Ligatures=TeX]{Roboto} % can't find helvetica ttf fonts
+\fi
+
+
+\pagestyle{fancyplain}
+\fancyhf{}
+	\makeatletter
+	\let\ps@empty\ps@plain
+	\let\ps@firstpage\ps@plain
+	\makeatother
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\dateseparator}{--}
+\rfoot{Compiled on \yyyymmdddate\today\ at \currenttime}
+
+\begin{document}	
+\signature{Joseph Marvin McGee}           % name for signature
+%\address{jmmcgee.00@gmail.com \\ 4854 Presidio Drive \\ Los Angeles, CA 90043}
+\date{\today}
+
+%\longindentation=0pt                       % needed to get closing flush left
+%\let\raggedleft\raggedright                % needed to get date flush left
+
+\begin{letter}{}%ADRESS OF TARGET/RECIPIENT
+
+% DO NOT EDIT, tailored mirror to resume.tex	
+{\large\bfseries Joseph Marvin McGee }
+\vspace{2pt}
+\hrule height 0.5pt
+\vspace{-2pt}
+%\vspace{-6pt}
+\textbf{Software Engineer} \hfill \href{mailto:jmmcgee.00@gmail.com}{jmmcgee.00@gmail.com}
+---  \href{tel:+1-323-557-8647}{(323) 557-8647}
+%\vfill % forces letterhead to top of page
+
+\opening{To whom it may concern:}
+
+%PARAGRAPH ONE: State reason for letter, name the position or type 
+%of work you are applying for and identify source from  which  you 
+%learned   of   the  opening.  (i.e.  Career  Development  Center, 
+%newspaper, employment service, personal contact). 
+
+I am writing to apply for a position as a Software Engineer. I am primarily interested in working on rippled (XRP Ledger), but as there are no listings for that team, I am applying to various Java positions which I believe that I am more than competent to fill.
+
+
+%PARAGRAPH  TWO:  Indicate why you are interested in the position, 
+%the company, its products, services - above all, stress what  you 
+%can  do  for  the employer. If you are a recent graduate, explain 
+%how your academic background makes you a qualified candidate  for 
+%the  position.  If  you have practical work experience, point out 
+%specific achievements or unique qualifications. Try not to repeat 
+%the  same  information  the reader will find in the resume. Refer 
+%the reader to the enclosed resume or application which summarizes 
+%your  qualifications,  training,  and experiences. The purpose of 
+%this section is to strengthen your resume  by  providing  details 
+%which bring your experiences to life. 
+
+My interest in working for Ripple derives from a broader interest in cryptocurrency that I've had since I first began to consider the technology of money in high school, when I began to look into Bitcoin and the Federal Reserve. Over the past few years, with the benefit of my undergraduate education, I've looked again at the cryptocurrency space and thought over many of its problems and inadequacies. While I am disappointed overall by the fraud and unseriousness that characterizes much of the space, Ripple is one a few projects that I believe has the potential to bring the promise of financial inclusion to the world. I'd be gratified to be able to work productively toward that end. 
+
+In 2015 I co-founded Archer which sought to provide quality user engagement data and analytics to advertisers, while establishing relationships with commercial venues to rent out space for our kiosks. My work on Archer spanned much of my undergraduate and all of my graduate career, and I learned a great deal through the experience of growing to manage greater responsibility and to function in roles that I received little training for, managing a small team, dispatching tasks, and integrating the resulting work.
+
+Unfortunately, in the midst of personal commitments and difficulties, my graduate education, research, and internships, my commitment to Archer became untenable. I stepped back from that role in order to be more able to focus on my personal commitments. Unfortunately, the timing of this decision made it difficult to finish my graduate program, which I have also withdrawn from.
+
+Therefore, I am now seeking employment as a Software Engineer, confident that the experience I've gained---throughout my undergraduate and graduate education in Computer Science, internships at Intel and Ripple, as well as my own enterprise---commends me.
+
+My resume, synopsizing my experience is enclosed. Please contact me for an interview at \href{mailto:jmmcgee.00@gmail.com}{jmmcgee.00@gmail.com}
+ or \href{tel:+1-323-557-8647}{(323) 557-8647} as soon as is convenient. Correspondence over email is preferred.
+
+ 
+%PARAGRAPH THREE: Request a personal interview and  indicate  your 
+%flexibility as to the time and place. Repeat your phone number in 
+%the letter and offer assistance to help in a speedy response. For 
+%example,  state that you will be in the city where the company is 
+%located on a certain date and would like to set up an  interview. 
+%Or,  state  that  you  will  call  on a certain date to set up an 
+%interview. End the letter by thanking  the  employer  for  taking 
+%time to consider your credentials. 
+
+Thank you for your consideration.
+
+\closing{Sincerely yours,}
+
+%---------------------------------------------------------------------------------------------------
+\end{letter}
+\end{document}
