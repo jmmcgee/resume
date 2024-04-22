@@ -1,178 +1,113 @@
-\documentclass[10pt, center]{res} % doucment type
+\documentclass[centered]{res} % doucment type
 \usepackage[letterpaper, total={7in,10in}, hoffset=0in]{geometry} % paper details
-%\usepackage[hmargin=2.00cm, vmargin=0.90cm]{geometry}
-%\usepackage[a4paper, total={8in,11in}]{geometry}
-\usepackage{fancyhdr}
-\usepackage[us,12hr]{datetime}
-\usepackage{helvet}
 %\usepackage{showframe}
 
 \usepackage{enumitem,multicol}
-\usepackage{hyperref,xcolor}
-\usepackage{ifthen,ifxetex,ifluatex}
+\usepackage{hyperref}
+\usepackage{ifxetex}
 \ifxetex
-	\usepackage{fontspec}
-%	\setmainfont[Ligatures=TeX]{Adobe Helvetica} % can't find helvetica ttf font
+	\usepackage{helvet}
+%	\usepackage{fontspec}
+%	\setmainfont[Ligatures=TeX]{Linux Libertine O}
+\else
+	\usepackage{helvet}
 \fi
-
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\dateseparator}{--}
-\rfoot{}
-%\rfoot{Compiled on \yyyymmdddate\today\ at \currenttime}
-\cfoot{}
-
-\newcommand{\pad}{\vspace{2pt}}
-\newcommand{\unpad}{\vspace{-2pt}}
 
 \newcommand{\bullets}[1]{
 	\begin{itemize}[noitemsep]
-		#1
+		{#1}
 	\end{itemize}
 	\vspace{-6pt}
 }
 
 \newcommand{\experience}[5]{
-	{\bf #1}, #2 \hfill {\bf #3} \\ \vspace{-10pt}
+	\textbf{#1}, {#2} \hfill \textbf{#3}
 	%\ifx#3\empty{\\ NOTHING}\else{\\ #3}\fi
 	\ifx\hfbuzz#4\hfbuzz
-		\vspace{-4pt}
 	\else
-		{\vspace{-4pt} \\ #4}
+		\\ {#4}
 	\fi
 	\bullets{#5}
 }
 
 
 \newcommand{\project}[4]{
-	{\bf #1} \hfill {\bf #3} \\ \vspace{-14pt} \\
+	\textbf{#1} \hfill \textbf{#3} \\
 	{\small #2}
 	\bullets{#4}
 }
-
-\newcommand{\skill}[2]{
-	{\bf #1}
-	\begin{itemize}[noitemsep,leftmargin=*]
-		#2
-	\end{itemize}
-	\vspace{-6pt}
-}
-
-\newcommand{\SkillType}[1]{ {\bfseries \normalsize #1} }
-\newcommand{\SkillElem}[2]{%
-\ifthenelse{#1=0}{{\LARGE #2}}{%
-\ifthenelse{#1=1}{{\Large #2}}{%
-\ifthenelse{#1=2}{{\large #2}}{%
-\ifthenelse{#1=3}{{\normalsize #2}}{%
-\ifthenelse{#1=4}{{\small #2}}{%
-\ifthenelse{#1=5}{{\footnotesize #2}}{%
-\ifthenelse{#1=6}{{\bfseries \itshape \large #2}}{%
-\ifthenelse{#1=7}{{\bfseries \itshape \large #2}}{%
-\ifthenelse{#1=8}{{\bfseries \itshape \large #2}}{%
-\ifthenelse{#1=9}{{\bfseries \itshape \large #2}}{}}}}}}}}}}
-}
-
-%\newcommand{\bullet}[1]{
-%	\parbox{\textwidth}{\item #1}
-%}
-
 
 \begin{document}
 \name{\textbf{\huge Joseph Marvin McGee}}
 \newcommand{\email}{\href{mailto:jmmcgee.00@gmail.com}{jmmcgee.00@gmail.com} }
 \newcommand{\phone}{\href{tel:+1-213-646-1070}{(213) 646-1070} }
 \address{\email | \phone}
+
 \begin{resume}
-%---------------------------------------------------------------------------------------------------
-
-\pad
 \centerline{\textbf{\huge Software Engineer}}
-\parbox{\textwidth}{
-}
+\parbox{\textwidth}{}
 
-\unpad
 \section{EXPERIENCE}
-	\experience {Software Engineer II}{\href{https://www.sncorp.com}{Sierra Nevada Corporation}}{2019 -- 2020}{}{
-	\item Engineered cloud-based processing architecture of SDRs, utilizing emerging government standards to create a SIGINT/COMINT system easily tailored to particular applications.
-	\item Engineered common development environment for team along with scripts to standardize development and testing tasks, and to consolidate operational knowledge.
-	\item Developed workflow to integrate and deploy software into a Kubernetes architecture, taking ownership of design, and ongoing maintenance of the process.
+	\experience {Software Engineer II}{\href{https://www.sncorp.com}{Sierra Nevada Corporation}}{2019 -- 2020}
+	{}{
+		\item Engineered cloud-based processing architecture of SDRs, utilizing emerging government standards to create a SIGINT/COMINT system easily tailored to particular applications.
+		\item Engineered common development environment for team along with scripts to standardize development and testing tasks, and to consolidate operational knowledge.
+		\item Developed workflow to integrate and deploy software into a Kubernetes architecture, taking ownership of design, and ongoing maintenance of the process.
 	}
 
-	\experience{Co-Founder}{Archer}{2015 -- 2019}{
-	Archer provides facial detection-based software to track user engagement with in-store adverts.}{
+	\experience{Co-Founder}{Archer}{2015 -- 2019}
+	{Archer provides facial detection-based software to track user engagement with in-store adverts.}{
 		\item Architected and developed Django server to handle live data streams from in-store kiosks and to visualize data for customer demos and debugging.
 		\item Architected and developed scripts to automatically compile, test and deploy software, to automatically provision servers and in-store kiosks, and to handle key management.
 		\item Managed development and integration tasks for a small remote team to deliver goals.
 	}
 
-    \experience{Software Engineer}{\href{https://ripple.com/}{Ripple}}{Summer 2017}{
-   	Ripple provides one frictionless experience to send money globally using the power of blockchain.}{
+	\experience{Software Engineer}{\href{https://ripple.com/}{Ripple}}{Summer 2017}
+	{Ripple provides one frictionless experience to send money globally using the power of blockchain.}{
 		\item Designed and built out a framework to simulate consensus and validation on XRP Ledger.
 		\item Designed metrics to report QoS and  to have visibility into network fragility
 		\item Researched benefits and constraints of potential modifications to the consensus protocol.
 		\item Became proficient in modern C++ (11/14) generics and meta-template programming
-    }
+	}
 
-    \experience{Software Engineer}{\href{https://www.intel.com}{Intel}}{Summer 2015}{}{
+	\experience{Software Engineer}{\href{https://www.intel.com}{Intel}}{Summer 2015}
+	{}{
 		\item Modified OpenMPI to route network I/O through DPDK framework.
 		\item Debugged OpenMPI and DPDK-based TCP/IP user-space network stacks to diagnose errors.
 		\item Implemented deficiencies in DPDK-based TCP/IP network stacks to make them compatible with OpenMPI.
 		\item Diagnosed and resolved linkage errors resulting from the interaction of several layers of shared/static libraries.
-    }
+	}
 
-	\experience{Teacher's Assistant}{University of California, Davis}{2015 -- 2016}{}{
+	\experience{Teacher's Assistant}{University of California, Davis}{2015 -- 2016}
+	{}{
 		\item[] \hspace{-12pt} FQ2016 ECS 132: Probability \& Statistics in Computer Science %\hfill {\bf 09/16 -- 12/16}
 		\item[] \hspace{-12pt} SQ2016 ECS 030: Introduction to Programming (in C) %\hfill {\bf 03/16 -- 06/16}
 		\item[] \hspace{-12pt} SQ2015 ECS 122A: Algorithm Analysis and Design %\hfill {\bf 03/15 -- 06/15}
 	}
 
 \section{PROJECTS}
-    \project{High Speed Networking/Performance Research}{University of California, Davis}{2015 -- 2017}{
+	\project{High Speed Networking/Performance Research}{University of California, Davis}{2015 -- 2017}{
 		\item Integrated DPDK into OpenMPI communication subsystem to characterize potential performance benefits
-        \item Analyzed bottlenecks in utilizing 10/40/100Gb network speeds on commodity hardware/software
-        \item Explored extensible and flexible solution to scale to increasing core-counts and network speeds.
+		\item Analyzed bottlenecks in utilizing 10/40/100Gb network speeds on commodity hardware/software
+		\item Explored extensible and flexible solution to scale to increasing core-counts and network speeds.
 	}
 
 \section{EDUCATION}
-{\sl M.S in Computer Science}, Incomplete  \hfill [3.6/4.0] \quad {\bf 2016 -- 2019} \\
-{\sl B.S in Computer Science and Engineering}, June 2016 \hfill (Major) [3.5/4.0] \quad  {\bf 2012 -- 2016} \\
+\textsl{M.S in Computer Science}, Incomplete  \hfill [3.6/4.0] \quad {\bf 2016 -- 2019} \\
+\textsl{B.S in Computer Science and Engineering}, June 2016 \hfill (Major) [3.5/4.0] \quad  {\bf 2012 -- 2016} \\
 University of California, Davis
 
 \section{SKILLS}
 \vspace{0pt}
 \begin{multicols}{2}
-	\SkillType{Languages:} C++, C, Java, Python, JavaScript \\
-	\SkillType{Systems:} bash, ssh, vim, ctags, systemd, docker, K8s \\
+	\textbf{Languages:} C++, C, Java, Python, JavaScript \\
+	\textbf{Systems:} bash, ssh, vim, ctags, systemd, docker, K8s \\
 	
 	\columnbreak
 	
-	\SkillType{Build/Test:} Git, Make, CMake, Maven, GDB \\
-	\SkillType{Misc:} VirtualBox, Wireshark, LaTeX, OpenCV \\
+	\textbf{Build/Test:} Git, Make, CMake, Maven, GDB \\
+	\textbf{Misc:} VirtualBox, Wireshark, LaTeX, OpenCV \\
 \end{multicols}
-
-%\begin{multicols}{6}
-%	\skill{Advanced}{
-%		\item C \item C++ \item Java
-%	} \columnbreak
-%
-%	\skill{Proficient}{
-%		\item Python \item  ssh \item  git \item  bash
-%		\columnbreak \item[]
-%		\item  Vim \item  Make \item CMake	
-%	} \columnbreak
-%
-%
-%	\skill{Familiar}{
-%		\item JavaScript \item R \item SQL \item LaTex \item OpenCV
-%		\columnbreak \item[]
-%		\item gdb \item ctags \item Maven \item  WireShark \item Virtualbox
-%	} \columnbreak
-%
-%	\skill{Exposed}{
-%	\item Lisp \item Prolog \item Vagrant  %\item System Verilog
-%	}
-%\end{multicols}
-	%\end{center}
 
 \end{resume}
 \end{document}
