@@ -3,7 +3,7 @@
 all: resume.pdf
 
 %.pdf : %.tex
-	latexmk -pdfxe $<
+	latexmk -pdf $<
 
 clean:
 	latexmk -CA
